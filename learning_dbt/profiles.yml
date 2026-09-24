@@ -1,0 +1,9 @@
+#fichier de configuration pour se connecter à ma datawharehouse
+learning_dbt:
+#environnement dev par défaut qui sera exécuté par dbt
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: './outputs/donnees_transformees.db'
+      schema: 'main'
